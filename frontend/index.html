@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Memoona Almas — Banking & Finance Professional</title>
+<meta name="description" content="Memoona Almas — Economics graduate specializing in Banking, Finance, and Data Analytics. Based in Sargodha, Pakistan.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,600&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ════════════════════════ PARTICLES ════════════════════════ -->
+<canvas id="particle-canvas"></canvas>
+
+<!-- ════════════════════════ NAV ════════════════════════ -->
+<nav id="navbar">
+  <div class="nav-inner">
+    <a href="#home" class="nav-logo">Memoona <span>Almas</span></a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#achievements">Achievements</a></li>
+      <li><a href="#media">Articles & Media</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="nav-right">
+      <button class="nav-cv-btn" onclick="downloadCV()">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2v10m0 0l-3-3m3 3l3-3M3 17v2a2 2 0 002 2h14a2 2 0 002-2v-2"/></svg>
+        Download CV
+      </button>
+      <div id="adminBadge" class="admin-badge hidden"><span class="admin-dot"></span>Edit Mode<button class="exit-admin-btn" onclick="exitAdmin()">Exit</button></div>
+      <button class="nav-hamburger" onclick="toggleMobile()" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+<div id="mobileNav" class="mobile-nav">
+  <a href="#about" onclick="closeMobile()">About</a>
+  <a href="#skills" onclick="closeMobile()">Skills</a>
+  <a href="#education" onclick="closeMobile()">Education</a>
+  <a href="#experience" onclick="closeMobile()">Experience</a>
+  <a href="#projects" onclick="closeMobile()">Projects</a>
+  <a href="#achievements" onclick="closeMobile()">Achievements</a>
+  <a href="#media" onclick="closeMobile()">Articles & Media</a>
+  <a href="#contact" onclick="closeMobile()">Contact</a>
+  <a href="#" onclick="downloadCV();closeMobile()">⬇ Download CV</a>
+</div>
+
+<!-- ════════════════════════ HERO ════════════════════════ -->
+<section id="home" class="hero">
+  <div class="hero-grid"></div>
+  <div class="hero-mesh"></div>
+  <div class="hero-inner">
+    <div class="hero-left">
+      <div class="hero-status">
+        <span class="status-dot"></span>
+        Open for Roles &amp; Opportunities
+      </div>
+      <h1 class="hero-name">
+        <span class="hero-name-1">Memoona</span>
+        <span class="hero-name-2">Almas</span>
+      </h1>
+      <p class="hero-title">Banking &amp; Finance Professional · Economics Graduate · Data Analyst</p>
+      <p class="hero-bio">Motivated Economics graduate with strong analytical, communication, and problem-solving skills. Equipped with Python, Stata, and MS Excel expertise — eager to contribute to banking operations, financial analysis, and customer relations.</p>
+      <div class="hero-cta">
+        <button class="btn-primary" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 01-2.18 2A19.79 19.79 0 0111.5 19a19.5 19.5 0 01-6-6A19.79 19.79 0 013.12 4.18 2 2 0 015.11 2h3a2 2 0 012 1.72c.13 1 .36 1.97.71 2.9a2 2 0 01-.45 2.11l-1.27 1.27a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.93.35 1.9.58 2.9.71A2 2 0 0122 16.92z"/></svg>
+          Get In Touch
+        </button>
+        <button class="btn-ghost" onclick="downloadCV()">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2v10m0 0l-3-3m3 3l3-3M3 17v2a2 2 0 002 2h14a2 2 0 002-2v-2"/></svg>
+          Download CV
+        </button>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat-card">
+          <span class="stat-num">3.37</span>
+          <span class="stat-lbl">CGPA / 4.0</span>
+        </div>
+        <div class="hero-stat-card">
+          <span class="stat-num">3+</span>
+          <span class="stat-lbl">Years Research</span>
+        </div>
+        <div class="hero-stat-card">
+          <span class="stat-num">8mo</span>
+          <span class="stat-lbl">Teaching Exp.</span>
+        </div>
+        <div class="hero-stat-card">
+          <span class="stat-num">5+</span>
+          <span class="stat-lbl">Tech Tools</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-right">
+      <div class="hero-card">
+        <p class="hero-card-title">Technical Stack</p>
+        <div class="skill-chips">
+          <span class="chip">Python &amp; AI</span>
+          <span class="chip">MS Excel</span>
+          <span class="chip">Stata</span>
+          <span class="chip sky">Data Analysis</span>
+          <span class="chip sky">Financial Modelling</span>
+          <span class="chip gold">Research Design</span>
+          <span class="chip gold">Econometrics</span>
+        </div>
+      </div>
+      <div class="hero-card">
+        <p class="hero-card-title">Languages &amp; Soft Skills</p>
+        <div class="skill-chips">
+          <span class="chip gold">Urdu (Native)</span>
+          <span class="chip gold">English (Fluent)</span>
+          <span class="chip">Leadership</span>
+          <span class="chip">Customer Relations</span>
+          <span class="chip sky">Teamwork</span>
+          <span class="chip sky">Critical Thinking</span>
+        </div>
+      </div>
+      <div class="hero-card">
+        <p class="hero-card-title">Quick Info</p>
+        <div style="display:flex;flex-direction:column;gap:8px">
+          <div style="display:flex;align-items:center;gap:10px;font-size:13px;color:rgba(232,237,245,0.7)">
+            <span style="color:var(--teal)">📍</span>Bhalwal, Sargodha, Pakistan
+          </div>
+          <div style="display:flex;align-items:center;gap:10px;font-size:13px;color:rgba(232,237,245,0.7)">
+            <span style="color:var(--teal)">🎓</span>BS Economics — University of Sargodha (2026)
+          </div>
+          <div style="display:flex;align-items:center;gap:10px;font-size:13px;color:rgba(232,237,245,0.7)">
+            <span style="color:var(--teal)">📧</span><a href="mailto:moona78615@gmail.com" style="color:var(--teal)">moona78615@gmail.com</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="scroll-cue">
+    <span>Scroll</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+<!-- ════════════════════════ ABOUT ════════════════════════ -->
+<section id="about" class="section section-alt">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-img-wrap reveal">
+        <div class="about-img-box" id="aboutImgBox" onclick="openModal('photoUploadModal')" style="cursor:pointer;position:relative">
+          <img id="aboutImgDisplay" src="" alt="Profile" style="display:none;width:100%;height:100%;object-fit:cover;border-radius:16px">
+          <span class="about-initials" id="aboutInitials">MA</span>
+          <div style="position:absolute;top:8px;right:8px;background:rgba(0,0,0,0.5);padding:4px 8px;border-radius:6px;font-size:11px;color:#fff;opacity:0;transition:opacity 0.2s" class="about-edit-hint">Click to change</div>
+        </div>
+        <div class="about-badge">
+          <strong id="displayCGPA">3.37</strong>
+          CGPA Score
+        </div>
+      </div>
+      <div class="about-content reveal">
+        <p class="eyebrow">About Me</p>
+        <h2 class="section-title">Analytical mind,<br><em>finance heart.</em></h2>
+        <p class="about-desc">Based in Bhalwal, Sargodha, I am completing my BS Economics at the University of Sargodha. My academic journey has been shaped by a passion for econometric modeling, financial data analysis, and applying Python-driven insights to real economic questions.</p>
+        <p class="about-desc">I bring a blend of quantitative rigor and communication clarity — having taught, researched, and led projects that bridge theory with applied financial practice. My goal is to build a long-term career in banking and financial analytics.</p>
+        <div class="info-list">
+          <div class="info-item">
+            <div class="info-icon">📍</div>
+            <div><div class="info-item-lbl">Location</div><div class="info-item-txt" id="disp-location">Bhalwal, Sargodha, Pakistan</div></div>
+            <svg class="edit-pencil" onclick="openContactModal()" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 013 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+          </div>
+          <div class="info-item">
+            <div class="info-icon">📧</div>
+            <div><div class="info-item-lbl">Email</div><div class="info-item-txt"><a id="disp-email" href="mailto:moona78615@gmail.com">moona78615@gmail.com</a></div></div>
+          </div>
+          <div class="info-item">
+            <div class="info-icon">📱</div>
+            <div><div class="info-item-lbl">Phone</div><div class="info-item-txt" id="disp-phone">0320-7475162</div></div>
+            <svg class="edit-pencil" onclick="openContactModal()" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 013 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+          </div>
+          <div class="info-item">
+            <div class="info-icon">🔗</div>
+            <div><div class="info-item-lbl">LinkedIn</div><div class="info-item-txt"><a id="disp-linkedin" href="#" target="_blank">View Profile</a></div></div>
+          </div>
+        </div>
+        <div class="soft-pills">
+          <span class="soft-pill">Customer Relations</span>
+          <span class="soft-pill">Critical Thinking</span>
+          <span class="soft-pill">Time Management</span>
+          <span class="soft-pill">Leadership</span>
+          <span class="soft-pill">Attention to Detail</span>
+          <span class="soft-pill">Urdu · English</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════ SKILLS ════════════════════════ -->
+<section id="skills" class="section">
+  <div class="container">
+    <div class="section-head-row">
+      <div>
+        <p class="eyebrow">Competencies</p>
+        <h2 class="section-title">Skills &amp; <em>Expertise</em></h2>
+      </div>
+      <button class="add-btn" onclick="openModal('skillModal')">+ Add Skill</button>
+    </div>
+    <p class="section-sub">A combination of technical analytical tools and professional soft skills built through academic study and real-world experience.</p>
+    <div class="skills-wrap reveal">
+      <div>
+        <p class="skill-group-title">Technical Skills</p>
+        <div class="skill-rows" id="skillBarsWrap">
+          <div class="skill-row"><div class="skill-name-row"><span class="skill-name">MS Excel — Data Analysis &amp; Financial Modelling</span><span class="skill-pct">90%</span></div><div class="skill-bar"><div class="skill-fill" data-width="90"></div></div></div>
+          <div class="skill-row"><div class="skill-name-row"><span class="skill-name">Python for Data Science &amp; AI</span><span class="skill-pct">85%</span></div><div class="skill-bar"><div class="skill-fill" data-width="85"></div></div></div>
+          <div class="skill-row"><div class="skill-name-row"><span class="skill-name">Stata — Econometric &amp; Statistical Analysis</span><span class="skill-pct">80%</span></div><div class="skill-bar"><div class="skill-fill" data-width="80"></div></div></div>
+          <div class="skill-row"><div class="skill-name-row"><span class="skill-name">MS Word &amp; PowerPoint — Professional Reporting</span><span class="skill-pct">95%</span></div><div class="skill-bar"><div class="skill-fill" data-width="95"></div></div></div>
+          <div class="skill-row"><div class="skill-name-row"><span class="skill-name">Basic Accounting &amp; Bookkeeping</span><span class="skill-pct">75%</span></div><div class="skill-bar"><div class="skill-fill" data-width="75"></div></div></div>
+          <div class="skill-row"><div class="skill-name-row"><span class="skill-name">Research Design &amp; Data Collection</span><span class="skill-pct">88%</span></div><div class="skill-bar"><div class="skill-fill" data-width="88"></div></div></div>
+        </div>
+        <div id="dynamicSkills"></div>
+      </div>
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px">
+          <p class="skill-group-title">Professional Skills</p>
+          <button class="add-btn" onclick="openModal('profSkillModal')" style="padding:6px 12px;font-size:12px">+ Add</button>
+        </div>
+        <div class="soft-skill-rows">
+          <div class="soft-skill-item">Customer Communication</div>
+          <div class="soft-skill-item">Critical Thinking</div>
+          <div class="soft-skill-item">Problem Solving</div>
+          <div class="soft-skill-item">Time Management</div>
+          <div class="soft-skill-item">Teamwork &amp; Leadership</div>
+          <div class="soft-skill-item">Attention to Detail</div>
+          <div class="soft-skill-item">Relationship Building</div>
+          <div class="soft-skill-item">Deadline Adherence</div>
+          <div class="soft-skill-item">Urdu (Native)</div>
+          <div class="soft-skill-item">English (Fluent)</div>
+          <div id="dynamicProfSkills"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════ EDUCATION ════════════════════════ -->
+<section id="education" class="section section-alt">
+  <div class="container">
+    <div class="section-head-row">
+      <div>
+        <p class="eyebrow">Academic Journey</p>
+        <h2 class="section-title">Education</h2>
+      </div>
+      <button class="add-btn" onclick="openModal('educationModal')">+ Add Education</button>
+    </div>
+    <div class="timeline" id="educationTimeline">
+      <!-- Static entries -->
+      <div class="t-item reveal">
+        <div class="t-dot"></div>
+        <div class="t-card">
+          <div class="t-card-top">
+            <div><h3 class="t-degree">BS Economics</h3><p class="t-inst">University of Sargodha</p></div>
+            <span class="t-badge">2022 – 2026</span>
+          </div>
+          <span class="t-metric">CGPA: 3.37 / 4.0</span>
+        </div>
+      </div>
+      <div class="t-item reveal">
+        <div class="t-dot"></div>
+        <div class="t-card">
+          <div class="t-card-top">
+            <div><h3 class="t-degree">Associate Degree in Arts (ADA)</h3><p class="t-inst">University of Sargodha</p></div>
+            <span class="t-badge">2021 – 2023</span>
+          </div>
+          <span class="t-metric">459 / 800</span>
+        </div>
+      </div>
+      <div class="t-item reveal">
+        <div class="t-dot"></div>
+        <div class="t-card">
+          <div class="t-card-top">
+            <div><h3 class="t-degree">Intermediate — Computer Science</h3><p class="t-inst">BISE Sargodha</p></div>
+            <span class="t-badge">2019 – 2021</span>
+          </div>
+          <span class="t-metric">621 / 1100</span>
+        </div>
+      </div>
+      <div class="t-item reveal">
+        <div class="t-dot"></div>
+        <div class="t-card">
+          <div class="t-card-top">
+            <div><h3 class="t-degree">Matric — Biology</h3><p class="t-inst">BISE Sargodha</p></div>
+            <span class="t-badge">2017 – 2019</span>
+          </div>
+          <span class="t-metric">834 / 1100</span>
+        </div>
+      </div>
+      <div id="dynamicEducation"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════ EXPERIENCE ════════════════════════ -->
+<section id="experience" class="section">
+  <div class="container">
+    <div class="section-head-row">
+      <div>
+        <p class="eyebrow">Work History</p>
+        <h2 class="section-title">Experience</h2>
+      </div>
+      <button class="add-btn" onclick="openModal('experienceModal')">+ Add Experience</button>
+    </div>
+    <div class="exp-cards">
+      <div class="exp-card reveal">
+        <div class="exp-card-top">
+          <div><h3 class="exp-role">Junior Teacher</h3><p class="exp-org">Leader Grammar School, Bhalwal, Sargodha</p></div>
+          <span class="exp-duration">8 Months (Part-time)</span>
+        </div>
+        <ul class="exp-bullets">
+          <li>Delivered subject instruction to students, developing strong communication and presentation skills applicable to client-facing banking roles.</li>
+          <li>Maintained accurate student records, attendance registers, and assessment data — building habits of precision and data management.</li>
+          <li>Coordinated with parents and school administration, demonstrating professional interpersonal and customer-service abilities.</li>
+        </ul>
+      </div>
+      <div id="dynamicExperience"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════ PROJECTS ════════════════════════ -->
+<section id="projects" class="section section-alt">
+  <div class="container">
+    <div class="section-head-row">
+      <div>
+        <p class="eyebrow">Research & Projects</p>
+        <h2 class="section-title">Key <em>Projects</em></h2>
+      </div>
+      <button class="add-btn" onclick="openModal('projectModal')">+ Add Project</button>
+    </div>
+    <div class="projects-grid">
+      <div class="project-card reveal">
+        <div class="proj-icon">📊</div>
+        <div class="proj-top">
+          <span class="proj-year">2024</span>
+          <span class="proj-org">University Research</span>
+        </div>
+        <h3 class="proj-title">Factors Influencing Student Career Choices</h3>
+        <p class="proj-desc">Conducted primary data collection, statistical analysis using Stata, and produced a formal academic report examining the drivers of career selection among university students.</p>
+        <div class="proj-tags"><span class="proj-tag">Stata</span><span class="proj-tag">Data Collection</span><span class="proj-tag">Research Design</span></div>
+      </div>
+      <div class="project-card reveal">
+        <div class="proj-icon">🏪</div>
+        <div class="proj-top">
+          <span class="proj-year">2023</span>
+          <span class="proj-org">Applied Economics</span>
+        </div>
+        <h3 class="proj-title">Market Analysis of Kashmiri Chai</h3>
+        <p class="proj-desc">Performed pricing, demand, and competitive analysis of the local Kashmiri Chai market, demonstrating applied microeconomics and practical market research skills.</p>
+        <div class="proj-tags"><span class="proj-tag">Microeconomics</span><span class="proj-tag">Market Research</span><span class="proj-tag">Pricing Analysis</span></div>
+      </div>
+      <div class="project-card reveal">
+        <div class="proj-icon">🐍</div>
+        <div class="proj-top">
+          <span class="proj-year">2025</span>
+          <span class="proj-org">IBM / Coursera Certification</span>
+        </div>
+        <h3 class="proj-title">Python for Data Science &amp; AI Certification</h3>
+        <p class="proj-desc">Completed a verified certification in Python for Data Science and Artificial Intelligence, gaining practical programming skills for data analysis, automation, and AI-driven insights.</p>
+        <div class="proj-tags"><span class="proj-tag">Python</span><span class="proj-tag">Data Science</span><span class="proj-tag">AI</span></div>
+      </div>
+      <div id="dynamicProjects"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════ ACHIEVEMENTS ════════════════════════ -->
+<section id="achievements" class="section">
+  <div class="container">
+    <div class="section-head-row">
+      <div>
+        <p class="eyebrow">Honours & Awards</p>
+        <h2 class="section-title">Achievements &amp; <em>Certifications</em></h2>
+      </div>
+      <button class="add-btn" onclick="openModal('achievementModal')">+ Add Achievement</button>
+    </div>
+    <div class="ach-grid">
+      <div class="ach-card reveal">
+        <div class="ach-icon-box">🏆</div>
+        <div class="ach-tag-pill">Certification</div>
+        <h3 class="ach-title">Python for Data Science &amp; AI</h3>
+        <p class="ach-desc">Verified certificate from IBM covering Python programming, data analysis libraries, and AI fundamentals.</p>
+        <span class="ach-year">2025</span>
+      </div>
+      <div class="ach-card reveal">
+        <div class="ach-icon-box">✈️</div>
+        <div class="ach-tag-pill">Competitive</div>
+        <h3 class="ach-title">Pakistan Air Force (PAF) Recruitment Test</h3>
+        <p class="ach-desc">Appeared in PAF recruitment examination — reflects discipline, integrity, and a high standard of conduct and national service orientation.</p>
+        <span class="ach-year">2023</span>
+      </div>
+      <div class="ach-card reveal">
+        <div class="ach-icon-box">🎓</div>
+        <div class="ach-tag-pill">Academic</div>
+        <h3 class="ach-title">BS Economics — Strong CGPA</h3>
+        <p class="ach-desc">Maintaining a CGPA of 3.37 throughout BS Economics program at the University of Sargodha, demonstrating consistent academic excellence.</p>
+        <span class="ach-year">2022–2026</span>
+      </div>
+      <div class="ach-card reveal">
+        <div class="ach-icon-box">📚</div>
+        <div class="ach-tag-pill">Research</div>
+        <h3 class="ach-title">Published Academic Research</h3>
+        <p class="ach-desc">Conducted and presented research on student career choices and market economics, demonstrating applied research skills beyond the classroom.</p>
+        <span class="ach-year">2023–2024</span>
+      </div>
+      <div id="dynamicAchievements"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════ ARTICLES & MEDIA ════════════════════════ -->
+<section id="media" class="section section-alt">
+  <div class="container">
+    <div class="section-head-row">
+      <div>
+        <p class="eyebrow">Knowledge & Media</p>
+        <h2 class="section-title">Articles, Videos<br>&amp; <em>Media</em></h2>
+      </div>
+      <button class="add-btn" onclick="openModal('mediaModal')">+ Add Content</button>
+    </div>
+    <div class="media-tabs">
+      <button class="media-tab active" onclick="switchTab('articles',this)">📝 Articles</button>
+      <button class="media-tab" onclick="switchTab('videos',this)">🎥 Videos</button>
+      <button class="media-tab" onclick="switchTab('photos',this)">📷 Photos</button>
+    </div>
+    <!-- Articles -->
+    <div id="panel-articles" class="media-panel active">
+      <div class="articles-grid" id="articlesGrid">
+        <!-- Sample Article Card -->
+        <div class="article-card reveal" id="sampleArticle">
+          <div class="article-card-img">📈</div>
+          <div class="article-card-body">
+            <div class="article-card-meta">
+              <span class="article-tag-pill">Economics</span>
+              <span class="article-date-txt">Coming Soon</span>
+            </div>
+            <h3 class="article-card-title">Pakistan's Banking Sector: Opportunities for New Graduates</h3>
+            <p class="article-card-excerpt">An analytical look at the current state of Pakistan's banking industry, emerging roles for economics graduates, and the skills demanded by leading financial institutions in 2025.</p>
+            <span class="article-read-more">Read More →</span>
+          </div>
+        </div>
+      </div>
+      <div id="articlesEmpty" class="articles-empty hidden">
+        <div class="articles-empty-icon">📝</div>
+        <p>No articles yet. Login as admin to publish your first article.</p>
+      </div>
+    </div>
+    <!-- Videos -->
+    <div id="panel-videos" class="media-panel">
+      <div class="articles-grid" id="videosGrid">
+        <div class="article-card reveal">
+          <div class="article-card-img" style="background:linear-gradient(135deg,#1a0533,#2d1060);color:#9b59b6;font-size:48px">▶</div>
+          <div class="article-card-body">
+            <div class="article-card-meta">
+              <span class="article-tag-pill">Educational</span>
+              <span class="article-date-txt">Add via Admin</span>
+            </div>
+            <h3 class="article-card-title">Economics & Finance Video Lectures</h3>
+            <p class="article-card-excerpt">Add YouTube or educational video links here through the admin panel. Share learning resources, presentations, or recorded seminars with visitors.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Photos -->
+    <div id="panel-photos" class="media-panel">
+      <div class="photos-grid" id="photosGrid">
+        <div class="photo-card reveal" onclick="adminOnlyNotice()">
+          <div class="photo-placeholder">
+            <span style="font-size:36px">📷</span>
+            <span>Add your photos<br>via admin panel</span>
+          </div>
+        </div>
+        <div class="photo-card reveal" onclick="adminOnlyNotice()">
+          <div class="photo-placeholder">
+            <span style="font-size:36px">🎓</span>
+            <span>Graduation &amp;<br>campus moments</span>
+          </div>
+        </div>
+        <div class="photo-card reveal" onclick="adminOnlyNotice()">
+          <div class="photo-placeholder">
+            <span style="font-size:36px">📊</span>
+            <span>Research &amp;<br>project work</span>
+          </div>
+        </div>
+        <div class="photo-card reveal" onclick="adminOnlyNotice()">
+          <div class="photo-placeholder">
+            <span style="font-size:36px">🏆</span>
+            <span>Awards &amp;<br>certificates</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════ CONTACT ════════════════════════ -->
+<section id="contact" class="section">
+  <div class="container">
+    <p class="eyebrow">Get In Touch</p>
+    <h2 class="section-title" style="margin-bottom:56px">Let's <em>Connect</em></h2>
+    <div class="contact-grid">
+      <div class="contact-cards reveal">
+        <div class="contact-card">
+          <div class="contact-icon">📧</div>
+          <div><div class="contact-label">Email</div><div class="contact-value"><a id="contact-email" href="mailto:moona78615@gmail.com">moona78615@gmail.com</a></div></div>
+        </div>
+        <div class="contact-card">
+          <div class="contact-icon">📱</div>
+          <div><div class="contact-label">Phone</div><div class="contact-value" id="contact-phone">0320-7475162</div></div>
+        </div>
+        <div class="contact-card">
+          <div class="contact-icon">📍</div>
+          <div><div class="contact-label">Location</div><div class="contact-value" id="contact-location">Bhalwal, Sargodha, Pakistan</div></div>
+        </div>
+        <div class="contact-card">
+          <div class="contact-icon">🔗</div>
+          <div><div class="contact-label">LinkedIn</div><div class="contact-value"><a id="contact-linkedin" href="#" target="_blank">linkedin.com/in/memoona-almas</a></div></div>
+        </div>
+        <div class="contact-card">
+          <div class="contact-icon">⬇️</div>
+          <div><div class="contact-label">Curriculum Vitae</div><div class="contact-value"><a href="#" onclick="downloadCV();return false;" style="color:var(--teal)">Download PDF CV</a></div></div>
+        </div>
+        <!-- Reference -->
+        <div class="ref-card reveal" style="margin-top:8px">
+          <div class="ref-avatar">JH</div>
+          <div>
+            <p class="ref-name">Dr. Jabbar Ul Haq</p>
+            <p class="ref-title">Assistant Professor — University of Sargodha</p>
+            <p class="ref-contact">📱 03212070420<br>📧 <a href="mailto:jabbar.ulhaq@uos.edu.pk">jabbar.ulhaq@uos.edu.pk</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="contact-form-wrap reveal">
+        <h3 class="contact-form-title">Send a Message</h3>
+        <p class="contact-form-sub">Have a job offer, collaboration, or inquiry? I'd love to hear from you.</p>
+        <div class="form-row">
+          <label>Full Name</label>
+          <input type="text" id="cf-name" placeholder="Your name">
+        </div>
+        <div class="form-row">
+          <label>Email Address</label>
+          <input type="email" id="cf-email" placeholder="your@email.com">
+        </div>
+        <div class="form-row">
+          <label>Subject</label>
+          <input type="text" id="cf-subject" placeholder="e.g., Job Opportunity at ABC Bank">
+        </div>
+        <div class="form-row">
+          <label>Message</label>
+          <textarea id="cf-message" placeholder="Tell me about the opportunity or your inquiry..."></textarea>
+        </div>
+        <button class="contact-send-btn" onclick="sendMessage()">Send Message →</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════ FOOTER ════════════════════════ -->
+<footer class="footer">
+  <div class="footer-inner">
+    <p class="footer-copy">© 2025 <span>Memoona Almas</span> · Economics &amp; Finance Portfolio · All rights reserved</p>
+    <button class="footer-admin-btn" onclick="openModal('loginModal')">⚙ Admin</button>
+  </div>
+</footer>
+
+<!-- ════════════════════════ CV FLOATING BUTTON ════════════════════════ -->
+<button class="cv-float" onclick="downloadCV()" title="Download CV">
+  <div class="cv-tooltip">Download My CV (PDF)</div>
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+    <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/>
+    <polyline points="14,2 14,8 20,8"/>
+    <line x1="12" y1="18" x2="12" y2="12"/>
+    <polyline points="9,15 12,18 15,15"/>
+  </svg>
+</button>
+
+<!-- ════════════════════════ ADMIN CV PANEL ════════════════════════ -->
+<div class="cv-panel" id="cvPanel">
+  <button class="cv-panel-close" onclick="document.getElementById('cvPanel').classList.remove('open')">✕</button>
+  <p class="cv-panel-title">📄 CV Manager</p>
+  <p class="cv-panel-sub">Upload a new PDF to replace the downloadable CV file.</p>
+  <div class="form-row">
+    <label>Upload New CV (PDF)</label>
+    <input type="file" id="cvUpload" accept=".pdf" onchange="handleCVUpload(this)">
+  </div>
+  <div class="form-row">
+    <label>CV File Name (optional)</label>
+    <input type="text" id="cvFileName" placeholder="e.g., Memoona_Almas_CV_2025.pdf">
+  </div>
+  <div style="display:flex;gap:10px;margin-top:16px">
+    <button class="btn-save" onclick="saveCVName()">Save Settings</button>
+    <button class="btn-cancel" onclick="downloadCV()">Test Download</button>
+  </div>
+  <p style="font-size:11px;color:var(--muted);margin-top:12px">Note: The CV file is stored in your browser. To make it permanent, host the PDF file alongside this website and update the download link in the code.</p>
+</div>
+
+<!-- ════════════════════════ LIGHTBOX ════════════════════════ -->
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+  <button class="lightbox-close" onclick="closeLightbox()">✕</button>
+  <img id="lightboxImg" src="" alt="">
+</div>
+
+<!-- ════════════════════════ TOAST ════════════════════════ -->
+<div class="toast" id="toast"></div>
+
+<!-- ════════════════════════ ARTICLE FULL READ MODAL ════════════════════════ -->
+<div class="modal-overlay" id="articleReadModal">
+  <div class="modal-box modal-box-wide">
+    <div class="modal-head">
+      <h3>Article</h3>
+      <button class="modal-close-btn" onclick="closeModal('articleReadModal')">✕</button>
+    </div>
+    <div class="article-read-meta" id="articleReadMeta"></div>
+    <h2 class="article-read-title" id="articleReadTitle"></h2>
+    <div class="article-read-body" id="articleReadBody"></div>
+  </div>
+</div>
+
+<!-- ════════════════════════ LOGIN MODAL ════════════════════════ -->
+<div class="modal-overlay" id="loginModal">
+  <div class="modal-box" style="max-width:420px">
+    <div class="login-emblem">MA</div>
+    <h2 class="login-title">Admin Login</h2>
+    <p class="login-sub">Portfolio owner access only</p>
+    <div class="login-error" id="loginError">Incorrect credentials. Please try again.</div>
+    <div class="form-row"><label>Username</label><input type="text" id="loginUser" placeholder="Enter username" autocomplete="off"></div>
+    <div class="form-row"><label>Password</label><input type="password" id="loginPass" placeholder="Enter password"></div>
+    <div style="display:flex;gap:10px;margin-top:8px">
+      <button class="btn-save" style="flex:1" onclick="attemptLogin()">Authenticate →</button>
+      <button class="btn-cancel" onclick="closeModal('loginModal')">Cancel</button>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════════════ EDUCATION MODAL ════════════════════════ -->
+<div class="modal-overlay" id="educationModal">
+  <div class="modal-box">
+    <div class="modal-head"><h3>Add Education Entry</h3><button class="modal-close-btn" onclick="closeModal('educationModal')">✕</button></div>
+    <div class="form-row"><label>Degree / Program</label><input type="text" id="eduDegree" placeholder="e.g., BS Economics"></div>
+    <div class="form-row"><label>Year Range</label><input type="text" id="eduYears" placeholder="e.g., 2022 – 2026"></div>
+    <div class="form-row"><label>Institution</label><input type="text" id="eduInstitute" placeholder="e.g., University of Sargodha"></div>
+    <div class="form-row"><label>Academic Metrics</label><input type="text" id="eduMetrics" placeholder="e.g., CGPA: 3.37"></div>
+    <div class="modal-actions"><button class="btn-cancel" onclick="closeModal('educationModal')">Cancel</button><button class="btn-save" onclick="submitEducation()">Save Entry</button></div>
+  </div>
+</div>
+
+<!-- ════════════════════════ EXPERIENCE MODAL ════════════════════════ -->
+<div class="modal-overlay" id="experienceModal">
+  <div class="modal-box">
+    <div class="modal-head"><h3>Add Experience</h3><button class="modal-close-btn" onclick="closeModal('experienceModal')">✕</button></div>
+    <div class="form-row"><label>Job Title / Role</label><input type="text" id="expRole" placeholder="e.g., Banking Analyst"></div>
+    <div class="form-row"><label>Duration</label><input type="text" id="expDuration" placeholder="e.g., 2024 – Present"></div>
+    <div class="form-row"><label>Company / Organization</label><input type="text" id="expCompany" placeholder="e.g., ABC Bank Limited"></div>
+    <div class="form-row"><label>Key Responsibilities (comma-separated)</label><textarea id="expBullets" placeholder="Managed client accounts, Processed financial data..."></textarea></div>
+    <div class="modal-actions"><button class="btn-cancel" onclick="closeModal('experienceModal')">Cancel</button><button class="btn-save" onclick="submitExperience()">Save Role</button></div>
+  </div>
+</div>
+
+<!-- ════════════════════════ PROJECT MODAL ════════════════════════ -->
+<div class="modal-overlay" id="projectModal">
+  <div class="modal-box">
+    <div class="modal-head"><h3>Add Project</h3><button class="modal-close-btn" onclick="closeModal('projectModal')">✕</button></div>
+    <div class="form-row"><label>Project Title</label><input type="text" id="projTitle" placeholder="e.g., Financial Dashboard"></div>
+    <div class="form-row"><label>Year</label><input type="text" id="projYear" placeholder="e.g., 2025"></div>
+    <div class="form-row"><label>Organization / Context</label><input type="text" id="projOrg" placeholder="e.g., Academic Research"></div>
+    <div class="form-row"><label>Icon / Emoji</label><input type="text" id="projIcon" placeholder="e.g., 📊 or 💹" style="font-size:20px"></div>
+    <div class="form-row"><label>Description</label><textarea id="projDesc" placeholder="What did this project involve?"></textarea></div>
+    <div class="form-row"><label>Tags (comma-separated)</label><input type="text" id="projTags" placeholder="Python, Data Analysis, Stata"></div>
+    <div class="modal-actions"><button class="btn-cancel" onclick="closeModal('projectModal')">Cancel</button><button class="btn-save" onclick="submitProject()">Save Project</button></div>
+  </div>
+</div>
+
+<!-- ════════════════════════ ACHIEVEMENT MODAL ════════════════════════ -->
+<div class="modal-overlay" id="achievementModal">
+  <div class="modal-box">
+    <div class="modal-head"><h3>Add Achievement / Certification</h3><button class="modal-close-btn" onclick="closeModal('achievementModal')">✕</button></div>
+    <div class="form-row"><label>Tag / Source</label><input type="text" id="achTag" placeholder="e.g., Coursera Certificate"></div>
+    <div class="form-row"><label>Icon / Emoji</label><input type="text" id="achIcon" placeholder="e.g., 🏆" style="font-size:20px"></div>
+    <div class="form-row"><label>Title</label><input type="text" id="achTitle" placeholder="e.g., Financial Modelling Certification"></div>
+    <div class="form-row"><label>Description</label><textarea id="achDesc" placeholder="What does this achievement recognize?"></textarea></div>
+    <div class="form-row"><label>Year</label><input type="text" id="achYear" placeholder="e.g., 2025"></div>
+    <div class="modal-actions"><button class="btn-cancel" onclick="closeModal('achievementModal')">Cancel</button><button class="btn-save" onclick="submitAchievement()">Save Achievement</button></div>
+  </div>
+</div>
+
+<!-- ════════════════════════ MEDIA MODAL ════════════════════════ -->
+<div class="modal-overlay" id="mediaModal">
+  <div class="modal-box modal-box-wide">
+    <div class="modal-head"><h3>Add Article, Video or Photo</h3><button class="modal-close-btn" onclick="closeModal('mediaModal')">✕</button></div>
+    <div class="form-row">
+      <label>Content Type</label>
+      <select id="mediaType" onchange="toggleMediaType()">
+        <option value="article">📝 Written Article</option>
+        <option value="video">🎥 Video (YouTube/Vimeo)</option>
+        <option value="photo">📷 Photo (URL)</option>
+      </select>
+    </div>
+    <div class="form-row"><label>Title</label><input type="text" id="mediaTitle" placeholder="e.g., Pakistan Banking Analysis 2025"></div>
+    <div class="form-row"><label>Category / Tag</label><input type="text" id="mediaTag" placeholder="e.g., Economics, Finance, Banking"></div>
+    <div id="mediaArticleGroup">
+      <div class="form-row"><label>Article Content</label><textarea id="mediaContent" placeholder="Write your full article, analysis, or commentary here..." style="min-height:160px"></textarea></div>
+    </div>
+    <div id="mediaVideoGroup" class="hidden">
+      <div class="form-row"><label>Video URL (YouTube or Vimeo)</label><input type="text" id="mediaVideoUrl" placeholder="https://www.youtube.com/watch?v=..."></div>
+      <div class="form-row"><label>Description</label><textarea id="mediaVideoDesc" placeholder="Describe this video..."></textarea></div>
+    </div>
+    <div id="mediaPhotoGroup" class="hidden">
+      <div class="form-row"><label>Photo URL</label><input type="text" id="mediaPhotoUrl" placeholder="https://example.com/your-photo.jpg"></div>
+      <div class="form-row"><label>Caption</label><input type="text" id="mediaPhotoCaption" placeholder="Photo caption or description"></div>
+    </div>
+    <div class="form-row"><label>Date</label><input type="date" id="mediaDate"></div>
+    <div class="modal-actions"><button class="btn-cancel" onclick="closeModal('mediaModal')">Cancel</button><button class="btn-save" onclick="submitMedia()">Publish</button></div>
+  </div>
+</div>
+
+<!-- ════════════════════════ SKILL ADD MODAL ════════════════════════ -->
+<div class="modal-overlay" id="skillModal">
+  <div class="modal-box">
+    <div class="modal-head"><h3>Add New Technical Skill</h3><button class="modal-close-btn" onclick="closeModal('skillModal')">✕</button></div>
+    <div class="form-row"><label>Skill Name</label><input type="text" id="skillName" placeholder="e.g., Advanced SQL"></div>
+    <div class="form-row"><label>Proficiency Level (%)</label><input type="number" id="skillLevel" min="0" max="100" placeholder="85"></div>
+    <div class="modal-actions"><button class="btn-cancel" onclick="closeModal('skillModal')">Cancel</button><button class="btn-save" onclick="submitSkill()">Add Skill</button></div>
+  </div>
+</div>
+
+<!-- ════════════════════════ PROFESSIONAL SKILL ADD MODAL ════════════════════════ -->
+<div class="modal-overlay" id="profSkillModal">
+  <div class="modal-box">
+    <div class="modal-head"><h3>Add Professional Skill</h3><button class="modal-close-btn" onclick="closeModal('profSkillModal')">✕</button></div>
+    <div class="form-row"><label>Skill Name</label><input type="text" id="profSkillName" placeholder="e.g., Negotiation, Leadership, Teamwork"></div>
+    <div class="modal-actions"><button class="btn-cancel" onclick="closeModal('profSkillModal')">Cancel</button><button class="btn-save" onclick="submitProfSkill()">Add Skill</button></div>
+  </div>
+</div>
+
+<!-- ════════════════════════ PHOTO UPLOAD MODAL ════════════════════════ -->
+<div class="modal-overlay" id="photoUploadModal">
+  <div class="modal-box">
+    <div class="modal-head"><h3>Update Profile Photo</h3><button class="modal-close-btn" onclick="closeModal('photoUploadModal')">✕</button></div>
+    <p style="font-size:13px;color:var(--muted);margin-bottom:12px">Upload a profile photo or paste an image URL</p>
+    <div class="form-row"><label>Upload Photo (JPG/PNG)</label><input type="file" id="photoFileUpload" accept="image/*" onchange="handlePhotoFileUpload(this)"></div>
+    <div style="text-align:center;margin:12px 0;color:var(--muted);font-size:12px">OR</div>
+    <div class="form-row"><label>Photo URL</label><input type="text" id="photoUrl" placeholder="https://example.com/photo.jpg"></div>
+    <div class="form-row"><label>CGPA (if you want to update)</label><input type="text" id="editCGPA" placeholder="e.g., 3.37"></div>
+    <div class="modal-actions"><button class="btn-cancel" onclick="closeModal('photoUploadModal')">Cancel</button><button class="btn-save" onclick="submitProfilePhoto()">Save Photo</button></div>
+  </div>
+</div>
+
+<!-- ════════════════════════ CONTACT EDIT MODAL ════════════════════════ -->
+<div class="modal-overlay" id="contactModal">
+  <div class="modal-box">
+    <div class="modal-head"><h3>Edit Contact Information</h3><button class="modal-close-btn" onclick="closeModal('contactModal')">✕</button></div>
+    <div class="form-row"><label>Email Address</label><input type="text" id="editEmail" placeholder="your@email.com"></div>
+    <div class="form-row"><label>Phone Number</label><input type="text" id="editPhone" placeholder="0320-1234567"></div>
+    <div class="form-row"><label>Location</label><input type="text" id="editLocation" placeholder="City, Country"></div>
+    <div class="form-row"><label>LinkedIn URL</label><input type="text" id="editLinkedin" placeholder="https://linkedin.com/in/..."></div>
+    <div class="modal-actions"><button class="btn-cancel" onclick="closeModal('contactModal')">Cancel</button><button class="btn-save" onclick="saveContactInfo()">Save Changes</button></div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
