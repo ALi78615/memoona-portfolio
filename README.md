@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 🚀 Memoona Almas Portfolio - Complete Hosting & Deployment Guide
 
 Welcome! Your portfolio website is now fully set up and ready for deployment. This guide walks you through everything you need to do next.
@@ -431,3 +432,7 @@ Your portfolio is production-ready. Follow the deployment steps above, and you'l
 - Test thoroughly before going live
 
 Good luck with your portfolio! 🚀
+=======
+# memoona-portfolio
+Professional portfolio website
+>>>>>>> 9802eba555197d96ac72ffb614fcb4708ebe8e7f
