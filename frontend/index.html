@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="google-site-verification" content="m_qlkkeXzfvJN71hcyDcIN7BBxeXhCyVSdoye0H2FEA" />
 <title>Memoona Almas — Banking & Finance Professional</title>
 <meta name="description" content="Memoona Almas — Economics graduate specializing in Banking, Finance, and Data Analytics. Based in Sargodha, Pakistan.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -11,10 +12,8 @@
 </head>
 <body>
 
-<!-- ════════════════════════ PARTICLES ════════════════════════ -->
 <canvas id="particle-canvas"></canvas>
 
-<!-- ════════════════════════ NAV ════════════════════════ -->
 <nav id="navbar">
   <div class="nav-inner">
     <a href="#home" class="nav-logo">Memoona <span>Almas</span></a>
@@ -52,7 +51,6 @@
   <a href="#" onclick="downloadCV();closeMobile()">⬇ Download CV</a>
 </div>
 
-<!-- ════════════════════════ HERO ════════════════════════ -->
 <section id="home" class="hero">
   <div class="hero-grid"></div>
   <div class="hero-mesh"></div>
@@ -143,7 +141,6 @@
   </div>
 </section>
 
-<!-- ════════════════════════ ABOUT ════════════════════════ -->
 <section id="about" class="section section-alt">
   <div class="container">
     <div class="about-grid">
@@ -196,7 +193,6 @@
   </div>
 </section>
 
-<!-- ════════════════════════ SKILLS ════════════════════════ -->
 <section id="skills" class="section">
   <div class="container">
     <div class="section-head-row">
@@ -243,7 +239,6 @@
   </div>
 </section>
 
-<!-- ════════════════════════ EDUCATION ════════════════════════ -->
 <section id="education" class="section section-alt">
   <div class="container">
     <div class="section-head-row">
@@ -254,7 +249,6 @@
       <button class="add-btn" onclick="openModal('educationModal')">+ Add Education</button>
     </div>
     <div class="timeline" id="educationTimeline">
-      <!-- Static entries -->
       <div class="t-item reveal">
         <div class="t-dot"></div>
         <div class="t-card">
@@ -300,7 +294,6 @@
   </div>
 </section>
 
-<!-- ════════════════════════ EXPERIENCE ════════════════════════ -->
 <section id="experience" class="section">
   <div class="container">
     <div class="section-head-row">
@@ -327,7 +320,6 @@
   </div>
 </section>
 
-<!-- ════════════════════════ PROJECTS ════════════════════════ -->
 <section id="projects" class="section section-alt">
   <div class="container">
     <div class="section-head-row">
@@ -373,7 +365,6 @@
   </div>
 </section>
 
-<!-- ════════════════════════ ACHIEVEMENTS ════════════════════════ -->
 <section id="achievements" class="section">
   <div class="container">
     <div class="section-head-row">
@@ -417,7 +408,6 @@
   </div>
 </section>
 
-<!-- ════════════════════════ ARTICLES & MEDIA ════════════════════════ -->
 <section id="media" class="section section-alt">
   <div class="container">
     <div class="section-head-row">
@@ -432,10 +422,8 @@
       <button class="media-tab" onclick="switchTab('videos',this)">🎥 Videos</button>
       <button class="media-tab" onclick="switchTab('photos',this)">📷 Photos</button>
     </div>
-    <!-- Articles -->
     <div id="panel-articles" class="media-panel active">
       <div class="articles-grid" id="articlesGrid">
-        <!-- Sample Article Card -->
         <div class="article-card reveal" id="sampleArticle">
           <div class="article-card-img">📈</div>
           <div class="article-card-body">
@@ -454,7 +442,6 @@
         <p>No articles yet. Login as admin to publish your first article.</p>
       </div>
     </div>
-    <!-- Videos -->
     <div id="panel-videos" class="media-panel">
       <div class="articles-grid" id="videosGrid">
         <div class="article-card reveal">
@@ -470,7 +457,6 @@
         </div>
       </div>
     </div>
-    <!-- Photos -->
     <div id="panel-photos" class="media-panel">
       <div class="photos-grid" id="photosGrid">
         <div class="photo-card reveal" onclick="adminOnlyNotice()">
@@ -502,7 +488,6 @@
   </div>
 </section>
 
-<!-- ════════════════════════ CONTACT ════════════════════════ -->
 <section id="contact" class="section">
   <div class="container">
     <p class="eyebrow">Get In Touch</p>
@@ -529,7 +514,6 @@
           <div class="contact-icon">⬇️</div>
           <div><div class="contact-label">Curriculum Vitae</div><div class="contact-value"><a href="#" onclick="downloadCV();return false;" style="color:var(--teal)">Download PDF CV</a></div></div>
         </div>
-        <!-- Reference -->
         <div class="ref-card reveal" style="margin-top:8px">
           <div class="ref-avatar">JH</div>
           <div>
@@ -564,7 +548,6 @@
   </div>
 </section>
 
-<!-- ════════════════════════ FOOTER ════════════════════════ -->
 <footer class="footer">
   <div class="footer-inner">
     <p class="footer-copy">© 2025 <span>Memoona Almas</span> · Economics &amp; Finance Portfolio · All rights reserved</p>
@@ -572,7 +555,6 @@
   </div>
 </footer>
 
-<!-- ════════════════════════ CV FLOATING BUTTON ════════════════════════ -->
 <button class="cv-float" onclick="downloadCV()" title="Download CV">
   <div class="cv-tooltip">Download My CV (PDF)</div>
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
@@ -583,7 +565,6 @@
   </svg>
 </button>
 
-<!-- ════════════════════════ ADMIN CV PANEL ════════════════════════ -->
 <div class="cv-panel" id="cvPanel">
   <button class="cv-panel-close" onclick="document.getElementById('cvPanel').classList.remove('open')">✕</button>
   <p class="cv-panel-title">📄 CV Manager</p>
@@ -603,16 +584,13 @@
   <p style="font-size:11px;color:var(--muted);margin-top:12px">Note: The CV file is stored in your browser. To make it permanent, host the PDF file alongside this website and update the download link in the code.</p>
 </div>
 
-<!-- ════════════════════════ LIGHTBOX ════════════════════════ -->
 <div class="lightbox" id="lightbox" onclick="closeLightbox()">
   <button class="lightbox-close" onclick="closeLightbox()">✕</button>
   <img id="lightboxImg" src="" alt="">
 </div>
 
-<!-- ════════════════════════ TOAST ════════════════════════ -->
 <div class="toast" id="toast"></div>
 
-<!-- ════════════════════════ ARTICLE FULL READ MODAL ════════════════════════ -->
 <div class="modal-overlay" id="articleReadModal">
   <div class="modal-box modal-box-wide">
     <div class="modal-head">
@@ -625,7 +603,6 @@
   </div>
 </div>
 
-<!-- ════════════════════════ LOGIN MODAL ════════════════════════ -->
 <div class="modal-overlay" id="loginModal">
   <div class="modal-box" style="max-width:420px">
     <div class="login-emblem">MA</div>
@@ -641,7 +618,6 @@
   </div>
 </div>
 
-<!-- ════════════════════════ EDUCATION MODAL ════════════════════════ -->
 <div class="modal-overlay" id="educationModal">
   <div class="modal-box">
     <div class="modal-head"><h3>Add Education Entry</h3><button class="modal-close-btn" onclick="closeModal('educationModal')">✕</button></div>
@@ -653,7 +629,6 @@
   </div>
 </div>
 
-<!-- ════════════════════════ EXPERIENCE MODAL ════════════════════════ -->
 <div class="modal-overlay" id="experienceModal">
   <div class="modal-box">
     <div class="modal-head"><h3>Add Experience</h3><button class="modal-close-btn" onclick="closeModal('experienceModal')">✕</button></div>
@@ -665,7 +640,6 @@
   </div>
 </div>
 
-<!-- ════════════════════════ PROJECT MODAL ════════════════════════ -->
 <div class="modal-overlay" id="projectModal">
   <div class="modal-box">
     <div class="modal-head"><h3>Add Project</h3><button class="modal-close-btn" onclick="closeModal('projectModal')">✕</button></div>
@@ -679,7 +653,6 @@
   </div>
 </div>
 
-<!-- ════════════════════════ ACHIEVEMENT MODAL ════════════════════════ -->
 <div class="modal-overlay" id="achievementModal">
   <div class="modal-box">
     <div class="modal-head"><h3>Add Achievement / Certification</h3><button class="modal-close-btn" onclick="closeModal('achievementModal')">✕</button></div>
@@ -692,7 +665,6 @@
   </div>
 </div>
 
-<!-- ════════════════════════ MEDIA MODAL ════════════════════════ -->
 <div class="modal-overlay" id="mediaModal">
   <div class="modal-box modal-box-wide">
     <div class="modal-head"><h3>Add Article, Video or Photo</h3><button class="modal-close-btn" onclick="closeModal('mediaModal')">✕</button></div>
@@ -722,7 +694,6 @@
   </div>
 </div>
 
-<!-- ════════════════════════ SKILL ADD MODAL ════════════════════════ -->
 <div class="modal-overlay" id="skillModal">
   <div class="modal-box">
     <div class="modal-head"><h3>Add New Technical Skill</h3><button class="modal-close-btn" onclick="closeModal('skillModal')">✕</button></div>
@@ -732,7 +703,6 @@
   </div>
 </div>
 
-<!-- ════════════════════════ PROFESSIONAL SKILL ADD MODAL ════════════════════════ -->
 <div class="modal-overlay" id="profSkillModal">
   <div class="modal-box">
     <div class="modal-head"><h3>Add Professional Skill</h3><button class="modal-close-btn" onclick="closeModal('profSkillModal')">✕</button></div>
@@ -741,7 +711,6 @@
   </div>
 </div>
 
-<!-- ════════════════════════ PHOTO UPLOAD MODAL ════════════════════════ -->
 <div class="modal-overlay" id="photoUploadModal">
   <div class="modal-box">
     <div class="modal-head"><h3>Update Profile Photo</h3><button class="modal-close-btn" onclick="closeModal('photoUploadModal')">✕</button></div>
@@ -754,7 +723,6 @@
   </div>
 </div>
 
-<!-- ════════════════════════ CONTACT EDIT MODAL ════════════════════════ -->
 <div class="modal-overlay" id="contactModal">
   <div class="modal-box">
     <div class="modal-head"><h3>Edit Contact Information</h3><button class="modal-close-btn" onclick="closeModal('contactModal')">✕</button></div>
